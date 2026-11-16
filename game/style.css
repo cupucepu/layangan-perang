@@ -1,0 +1,36 @@
+/* Layangan Perang — style.css
+   Halaman pembungkus game: latar senja, kanvas di tengah layar. */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #140b24;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game {
+  width: min(100vw, 177.78vh);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  cursor: crosshair;
+  touch-action: none;
+  outline: none;
+  display: block;
+}
+
+/* Dibaca layar, tidak ditampilkan: baris status untuk pembaca layar. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
